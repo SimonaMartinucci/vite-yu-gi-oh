@@ -23,6 +23,10 @@ export default {
     getCards() {
       let endPoint = store.apiURL;
 
+      if(store.selection !== '') {
+        endPoint += `?${store.searchPar}=${store.selection}`
+      }
+
       axios.get(endPoint)
       .then(res => {
         store.cardsList = res.data.data;

@@ -4,10 +4,10 @@ import { store } from '../store';
 export default {
     name: "AppSearch",
     data() {
-    return {
-      store,
-    }
-  },
+        return {
+            store,
+        }
+    },
 }
 </script>
 
@@ -15,9 +15,9 @@ export default {
     <div class="sel-cont">
         <select v-model="store.selection" @change="$emit('filter')">
         <option value="">Trova un archetipo</option>
-         <option v-for="archetype in store.archeTypes" :key="archetype" :value="archetype.archetype_name">
+        <option v-for="archetype in store.archeTypes" :key="archetype" :value="archetype.archetype_name">
             {{ archetype.archetype_name }}
-         </option>
+        </option>
     </select>
     </div>
 </template>
