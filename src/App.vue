@@ -24,7 +24,7 @@ export default {
       let endPoint = store.apiURL;
 
       if(store.selection !== '') {
-        endPoint += `?${store.searchPar}=${store.selection}`
+        endPoint += `&archetype=${store.selection}`
       }
 
       axios.get(endPoint)
@@ -55,8 +55,8 @@ export default {
   <AppHeader />
 
   <main>
-    <AppSearch />
-    <AppCards  @filter="getCards()" />
+    <AppSearch @filter="getCards()" />
+    <AppCards />
   </main>
 
 </template>
