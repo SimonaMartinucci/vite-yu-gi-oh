@@ -1,13 +1,18 @@
 <script>
+import AppCards from './AppCards.vue'
+
 export default {
     name: "AppMain",
+    components: {
+        AppCards,
+    }
 }
 </script>
 
 <template>
     <main>
         <div class="container">
-            
+            <AppCards/>
         </div>
     </main>
 </template>
@@ -19,16 +24,12 @@ export default {
 main {
     background-color: $primary;
     padding: 80px 0;
-    // DEBUG
-    height: calc(100vh - 100px);
 
     .container {
         background-color: white;
         width: 80%;
         margin: 0 auto;
         padding: 40px 0;
-        // DEBUG 
-        height: 300px;
     }
 }
 
